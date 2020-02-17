@@ -1,0 +1,93 @@
+{% extends "homebase.html" %}
+
+{% block title %} Comment List {% endblock %}
+
+{% block sidebar %}
+    {% include "sidebar2.html" %}
+{% endblock %}
+
+{% block body %}
+    	<!-- BREADCRUMB -->
+	<div id="breadcrumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li class="active">Comment List</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /BREADCRUMB -->
+
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+
+
+
+					<div class="col-md-3">
+						<div class="shiping-methods">
+							<div class="section-title">
+								<h4 class="title">User Menu</h4>
+							</div>
+
+                                {% include 'user_menu.html' %}
+                        </div>
+                    </div>
+
+                    <div class="col-md-9">
+						<div class="shiping-methods">
+							<div class="section-title">
+								<h4 class="title">My Reviews</h4>
+                            </div>
+
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{message.tags}}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <table width="800">
+                            <thead>
+                            <tr bgcolor="#5f9ea0">
+                                 <th>Product</th>
+                                <th>Subject</th>
+                                <th>Rating</th>
+                                <th>Comment</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Delete</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {% for rs in comments %}
+
+                                <tr>
+                                    <td class="qty text-left"><a href="{% url 'shop:product_detail' rs.product_id rs.product.slug  %}"> {{ rs.product }}</a></td>
+                                    <td class="qty text-left">{{ rs.subject }}</td>
+                                    <td class="qty text-left">{{ rs.rating }}</td>
+                                    <td class="qty text-left">{{ rs.message }}</td>
+                                    <td class="qty text-left">{{ rs.create_at }}</td>
+                                    <td class="qty text-left">
+                                        {% if rs.status == 1 %} True {% else %} False {% endif %}
+                                    </td>
+                                    <td class="text-right"><a href="{% url 'home:deletecomment' rs.id %}" onclick="return confirm('Do you really want to delete this review?')">Delete</a></td>
+
+                                </tr>
+
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                     </div>
+
+            </div>
+        <!-- /row -->
+        </div>
+    </div>
+
+{% endblock %}

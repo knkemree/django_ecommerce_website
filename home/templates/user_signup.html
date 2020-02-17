@@ -1,0 +1,81 @@
+{% extends "homebase.html" %}
+
+{% block title %} Comment List {% endblock %}
+
+{% block sidebar %}
+    {% include "sidebar2.html" %}
+{% endblock %}
+
+{% block body %}
+    	<!-- BREADCRUMB -->
+	<div id="breadcrumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li class="active">Sign Up</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /BREADCRUMB -->
+
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+
+
+
+					<div class="col-md-5">
+						<div class="shiping-methods">
+							<div class="section-title">
+								<h3 class="title">Sign Up</h3>
+                            </div>
+
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{message.tags}}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+
+                            <form method="POST">
+                                {% csrf_token %}
+
+
+                                {% for field in form %}
+
+                                    <tr>
+                                        <th>{{ field.label_tag }}</th>
+
+                                        <td>
+                                            <div class="form-group">
+                                            {{ field }}
+                                            {% for error in field.errors %}
+                                                <p style="...">{{ error }}</p>
+                                            {% endfor %}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td></td>
+                                    <td><button class="primary-btn" type="submit">Sign Up</button> </td>
+                                </tr>
+                            </form>
+
+
+
+
+
+                    </div>
+
+            </div>
+        <!-- /row -->
+        </div>
+    </div>
+
+{% endblock %}

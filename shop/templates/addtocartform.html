@@ -1,0 +1,9 @@
+{% for rs in pros %}
+<form action="{% url 'cart:cart_add' rs.id %}" method="post">
+
+    {{ cart_product_form }}
+    {% csrf_token %}
+
+    <input type="submit" class="primary-btn add-to-cart" value="Add to cart">
+</form>
+{% endfor %}

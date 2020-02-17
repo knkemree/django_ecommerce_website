@@ -1,0 +1,220 @@
+{% extends "homebase.html" %}
+{% load static %}
+{% block title %} Check Out {% endblock %}
+
+{% block sidebar %}
+    {% include "sidebar2.html" %}
+{% endblock %}
+{% block body %}
+
+<!-- BREADCRUMB -->
+
+	<div id="breadcrumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li class="active">Checkout</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /BREADCRUMB -->
+<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+
+
+
+					<div class="col-md-6">
+						<div class="billing-details">
+
+                            <div class="section-title">
+                                <h3 class="title"> Step 1: BILLING DETAILS</h3>
+                            </div>
+
+                            {% if user.id is null %}
+							<p>Already a customer ? <a href="#">Login</a></p>
+                            {% endif %}
+
+
+                            <form action="." method="post" class="order-form">
+                                {{ form.as_p }}
+                                {% csrf_token %}
+                                <input class="primary-btn" type="submit" value="Place order">
+
+                            </form>
+                            <div class="form-group">
+                                {% if user.id is False %}
+								<div class="input-checkbox">
+									<input type="checkbox" id="register">
+									<label class="font-weak" for="register">Create Account?</label>
+									<div class="caption">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+											<p>
+												<input class="input" type="password" name="password" placeholder="Enter Your Password">
+									</div>
+								</div>
+
+                                {% endif %}
+							</div>
+
+
+                        </div>
+                    </div>
+
+					<div class="col-md-6">
+						<div class="shiping-methods">
+							<div class="section-title">
+								<h4 class="title">Order Review</h4>
+							</div>
+                                	<table class="shopping-cart-table table">
+								<thead>
+									<tr>
+										<th class="text-center">Product</th>
+										<th></th>
+										<th class="text-center">Price</th>
+										<th class="text-center">Quantity</th>
+										<th class="text-center">Total</th>
+										<th class="text-center"></th>
+									</tr>
+								</thead>
+								<tbody>
+								    {% for item in cart %}
+                                        {% with product=item.product %}
+									<tr>
+										<td class="thumb text-center"><img src="{% if product.image %}
+                                                                        {{ product.image.url }}
+                                                                    {% else %}
+                                                                        {% static 'images/no_image.png' %}
+                                                                    {% endif %}" alt="">
+                                        </td>
+										<td class="details">
+											<h5 href="#">{{ item.product.name }}</h5>
+											<!--<ul>
+												<li><span>Size: XL</span></li>
+												<li><span>Color: Camelot</span></li>
+											</ul>-->
+										</td>
+										<td class="price text-center"><strong>{{ item.price }}</strong></td>
+										<td class="price text-center"><strong>x {{ item.quantity }}</strong></td>
+										<td class="total text-center"><strong class="primary-color">${{ item.total_price|floatformat:"2" }}</strong></td>
+
+									</tr>
+                                        {% endwith %}
+									{% endfor %}
+								</tbody>
+								<tfoot>
+									<tr>
+										<th class="empty" colspan="3"></th>
+										<th>SUBTOTAL</th>
+										<th colspan="2" class="sub-total">${{ cart.get_total_price }}</th>
+									</tr>
+									<tr>
+										<th class="empty" colspan="3"></th>
+										<th>"{{ cart.coupon.code }}" ({{ cart.coupon.discount }}% off)</th>
+										<td colspan="2">- ${{ cart.get_discount|floatformat:"2" }}</td>
+									</tr>
+									<tr>
+										<th class="empty" colspan="3"></th>
+										<th>SHIPING</th>
+										<td colspan="2">Free</td>
+									</tr>
+									<tr>
+										<th class="empty" colspan="3"></th>
+										<th>TOTAL</th>
+										<th colspan="2" class="total">${{ cart.get_total_price_after_discount|floatformat:"2" }}</th>
+									</tr>
+								</tfoot>
+							</table>
+							<div class="pull-right">
+								<button class="main-btn">Edit Items</button>
+							</div>
+						</div>
+						</div>
+
+					</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<form id="checkout-form" class="clearfix">
+					<div class="col-md-6">
+						<div class="order-summary clearfix">
+							<div class="section-title">
+								<h3 class="title">Step 2: Shipping Methods</h3>
+
+							</div>
+                                <div class="input-checkbox">
+								    <input type="radio" name="shipping" id="shipping-1" checked>
+								        <label for="shipping-1">Free Shiping -  $0.00</label>
+								        <div class="caption">
+									        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										        <p>
+								        </div>
+							    </div>
+                               <div class="input-checkbox">
+                                   <input type="radio" name="shipping" id="shipping-2">
+                                        <label for="shipping-2">Standard - $4.00</label>
+                                        <div class="caption">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                <p>
+                                        </div>
+
+                               </div>
+                                </br></br>
+                                			<div class="payments-methods">
+							                    <div class="section-title">
+								                        <h3 class="title">Step 3: Payment Methods </h3>
+							                    </div>
+							                    <div class="input-checkbox">
+								                    <input type="radio" name="payments" id="payments-1" checked>
+								                    <label for="payments-1">Direct Bank Transfer</label>
+                                                    <div class="caption">
+									                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										                <p>
+								                    </div>
+							                    </div>
+							                <div class="input-checkbox">
+								                <input type="radio" name="payments" id="payments-2">
+								                <label for="payments-2">Cheque Payment</label>
+								                <div class="caption">
+									                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										                <p>
+								                </div>
+							                </div>
+							                <div class="input-checkbox">
+								                <input type="radio" name="payments" id="payments-3">
+								                <label for="payments-3">Paypal System</label>
+								                <div class="caption">
+									                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										                <p>
+								                </div>
+
+							                </div>
+                                                </br>
+                                            <div class="pull-left">
+								                <button class="primary-btn">Place Order</button>
+							                </div>
+                                  </div>
+
+
+						</div>
+
+					</div>
+				</form>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+{% endblock %}
