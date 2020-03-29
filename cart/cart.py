@@ -7,6 +7,20 @@ from shop.models import Product
 
 class Cart(object):
 
+    def __init__(self, request):
+        """
+        Initialize the cart.
+        """
+        self.session = request.session
+        cart = self.session.get(settings.CART_SESSION_ID)
+        # store current applied coupon
+        self.coupon_id = self.session.get('coupon_id')
+
+        if not cart:
+            # save an empty cart in the session
+            cart = self.session[settings.CART_SESSION_ID] = {}
+        self.cart = cart
+
     @property
     def coupon(self):
         if self.coupon_id:
@@ -22,19 +36,7 @@ class Cart(object):
     def get_total_price_after_discount(self):
         return self.get_total_price() - self.get_discount()
 
-    def __init__(self, request):
-        """
-        Initialize the cart.
-        """
-        self.session = request.session
-        cart = self.session.get(settings.CART_SESSION_ID)
-        # store current applied coupon
-        self.coupon_id = self.session.get('coupon_id')
 
-        if not cart:
-            # save an empty cart in the session
-            cart = self.session[settings.CART_SESSION_ID] = {}
-        self.cart = cart
 
     def add(self, product, quantity=1, update_quantity=False): #false olmasi gerkiyor. degistirmeyi unutma
         """

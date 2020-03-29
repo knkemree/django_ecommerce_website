@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 
-from .models import Order, OrderItem, CustomerAddress
+from .models import Order, OrderItem, CustomerAddress, Orderpmp
 
 
 # Register your models here.
@@ -55,3 +55,7 @@ class CustomerAddressAdmin(admin.ModelAdmin):
     search_fields = ['line1']
 
 admin.site.register(CustomerAddress, CustomerAddressAdmin)
+
+class OrderpmpAdmin(admin.ModelAdmin):
+    list_display = ('useri','orderi','product_name', 'quantity', 'price_wholesale', 'category_name', 'order_date')
+admin.site.register(Orderpmp, OrderpmpAdmin)

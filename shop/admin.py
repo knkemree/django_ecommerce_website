@@ -2,7 +2,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
 from django.contrib import admin
-from shop.models import Category, Product, ProductImage
+from shop.models import Category, Product, ProductImage, Rec
 
 
 # Register your models here.
@@ -37,4 +37,7 @@ class PostForm(forms.ModelForm):
 
 class ProductImageAdmin(admin.ModelAdmin):
     list_display = ('product','image','create_at')
+
+admin.site.register(Rec)
+
 

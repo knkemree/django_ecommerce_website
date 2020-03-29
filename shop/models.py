@@ -1,14 +1,17 @@
+
+from django.utils import timezone
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 # Create your models here.
 
+
+
 class Category(models.Model):
     name = models.CharField(max_length=200,
         db_index=True)
-    slug = models.SlugField(max_length=200,
-        unique=True)
+    slug = models.SlugField(max_length=200, unique=False)#unique=True
 
     class Meta:
         ordering = ('name',)
@@ -79,5 +82,25 @@ class ProductImage(models.Model):
     image = models.ImageField(upload_to='images',)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
+
+class Rec(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    #product_id = models.CharField(max_length=750, blank=True)
+    rec1 = models.CharField(max_length=750, blank=True)
+    rec2 = models.CharField(max_length=750, blank=True)
+    rec3 = models.CharField(max_length=750, blank=True)
+    rec4 = models.CharField(max_length=750, blank=True)
+    rec5 = models.CharField(max_length=750, blank=True)
+    rec6 = models.CharField(max_length=750, blank=True)
+    rec7 = models.CharField(max_length=750, blank=True)
+    rec8 = models.CharField(max_length=750, blank=True)
+    rec9 = models.CharField(max_length=750, blank=True)
+    rec10 = models.CharField(max_length=750, blank=True)
+    created_date = models.DateTimeField(default=timezone.now, blank=True)
+
+    def __str__(self):
+        return self.product
+    class Meta:
+        ordering = ['product']
 
 

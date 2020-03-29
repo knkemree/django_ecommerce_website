@@ -83,4 +83,18 @@ class Customer(models.Model):
     phone_number = PhoneNumberField(blank=True)
 
 
+class Orderpmp(models.Model):
+    useri = models.CharField(max_length=750, blank=True, null=True)
+    orderi = models.CharField(max_length=750, blank=True, null=True)
+    producti = models.CharField(max_length=750, blank=True, null=True)
+    product_name = models.CharField(max_length=750, blank=True, null=True)
+    quantity = models.PositiveIntegerField(blank=True, null=True)
+    price_wholesale = models.DecimalField(max_digits=10, decimal_places=2)
+    categotyi = models.CharField(max_length=750, blank=True, null=True)
+    category_name = models.CharField(max_length=750, blank=True, null=True)
+    order_date = models.CharField(max_length=50, blank=True, null=True)
+    total_sale = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    parent_cat = models.CharField(max_length=750, blank=True, null=True)
+    def __str__(self):
+        return self.orderi
 

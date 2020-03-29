@@ -16,11 +16,15 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+
+from chartjs import views
 from onetech import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls', namespace='home')),
-    path('api/', include('EaganJones.api.urls', namespace='api')),
+    #path('api/', include('EaganJones.api.urls', namespace='api')),
+    path('firstchart', views.HomeView.as_view()),
+    path('api/', views.ChartData.as_view()),
     path('cart/', include('cart.urls', namespace='cart')),
     path('payment/', include('payment.urls', namespace='payment')),
     path('orders/', include('orders.urls', namespace='orders')),

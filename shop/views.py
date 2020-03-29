@@ -5,7 +5,12 @@ from django.db.models import Q
 from home.models import Comment
 from .models import Category, Product, ProductImage
 from cart.forms import CartAddProductForm
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
+import plotly.offline as py
+import plotly.graph_objects as go
+from django.db.models import Sum
+import datetime
+import numpy as np
 # Create your views here.
 
 
@@ -37,10 +42,33 @@ def product_detail(request, id, slug, ):
 
     cart_product_form = CartAddProductForm()
     gallery = ProductImage.objects.filter(product_id=id)
+
+
+    date = []
+    data = []
+    #x_data = Orderpmp.objects.values_list('order_date', flat=True)
+
+    #qs = Orderpmp.objects.values('order_date').annotate(daily_sale=Sum('quantity')).order_by('-order_date')
+    #for entry in qs:
+     #   data.append(entry['daily_sale'])
+    #    date.append(entry['order_date'])
+
+    #fig = go.Figure()
+    #fig.add_trace(go.Scatter(x=date, y=data,  name="daily sale",line_color='deepskyblue'))
+
+    #fig.update_layout(title_text='Time Series with Rangeslider',xaxis_rangeslider_visible=True, yaxis=dict(range=[0, 400]))
+    fig = go.Figure(
+        data=[go.Bar(y=[2, 1, 3])],
+        layout_title_text="A Figure Displayed with fig.show()"
+    )
+    plot_div = py.plot(fig, include_plotlyjs=False, output_type='div')
+
+
     context = {'commnets': comments,
                'product': product,
               'gallery': gallery,
               'cart_product_form': cart_product_form,
+               'plot_div': plot_div
                }
     return render(request, 'product_detail.html', context)
 
@@ -68,5 +96,6 @@ def addtocartform(request):
                 'pros': pros
                }
     return render(request, 'addtocartform.html', context)
+
 
 

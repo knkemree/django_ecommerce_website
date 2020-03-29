@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'home.apps.HomeConfig',
     'rest_framework',
+    'rest_framework.authtoken',
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
     'ckeditor',
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'EaganJones',
     'clear_cache',
     'django_json_widget',
+    'chartjs'
 
 
 
@@ -132,7 +134,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 20000
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -192,6 +194,7 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        #'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.authentication.TokenAuthentication',
     ]
 }
