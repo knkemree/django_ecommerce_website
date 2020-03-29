@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e52decb6-65c9-4547-93ae-fdbb5f70d635" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/shop/management/commands/_private.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/management/commands/recommendation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/styles/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/static/js/main_chartjs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onetech/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/onetech/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onetech/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/onetech/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/templates/homebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/templates/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chartjs/templates/charts-chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/chartjs/templates/charts-chartjs.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,30 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop/management/commands/recommendation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="104" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="104" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cart/cart.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/orders/management/commands/orderviz.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chartjs/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="306">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding>
                 <element signature="e#41#76#0" expanded="true" />
               </folding>
@@ -73,56 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chartjs/templates/charts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="156" column="2" selection-start-line="156" selection-start-column="2" selection-end-line="156" selection-end-column="2" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="20" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop/models.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chartjs/templates/charts-chartjs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#1#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cart/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cart/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            <state relative-caret-position="119">
+              <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -139,10 +69,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>with</find>
-      <find>upload_cs</find>
-      <find>searc</find>
-      <find>all cate</find>
       <find>select</find>
       <find>image</find>
       <find>img</find>
@@ -169,6 +95,10 @@
       <find>table</find>
       <find>add</find>
       <find>REST_FRAMEWORK</find>
+      <find>sta</find>
+      <find>static</find>
+      <find>.js</find>
+      <find>circul</find>
     </findStrings>
     <replaceStrings>
       <replace>.js' %}</replace>
@@ -188,8 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/shop/templates/products.html" />
-        <option value="$PROJECT_DIR$/shop/templates/project_lists.html" />
         <option value="$PROJECT_DIR$/../22/tworunn/home/templates/project_lists.html" />
         <option value="$PROJECT_DIR$/EaganJones/templates/newsdata.html" />
         <option value="$PROJECT_DIR$/EaganJones/urls.py.html" />
@@ -234,11 +162,13 @@
         <option value="$USER_HOME$/AppData/Local/Temp/Mxt124/RemoteFiles/4785220_4_7/urls.py" />
         <option value="$PROJECT_DIR$/onetech/settings.py" />
         <option value="$PROJECT_DIR$/orders/admin.py" />
-        <option value="$PROJECT_DIR$/chartjs/views.py" />
         <option value="$PROJECT_DIR$/orders/management/commands/orderviz.py" />
-        <option value="$PROJECT_DIR$/chartjs/templates/charts.html" />
         <option value="$PROJECT_DIR$/shop/management/commands/recommendation.py" />
         <option value="$PROJECT_DIR$/cart/views.py" />
+        <option value="$PROJECT_DIR$/chartjs/views.py" />
+        <option value="$PROJECT_DIR$/home/static/styles/main.css" />
+        <option value="$PROJECT_DIR$/chartjs/templates/charts.html" />
+        <option value="$PROJECT_DIR$/chartjs/templates/charts-chartjs.html" />
       </list>
     </option>
   </component>
@@ -275,12 +205,20 @@
             <path>
               <item name="onetech" type="b2602c69:ProjectViewProjectNode" />
               <item name="onetech" type="462c0819:PsiDirectoryNode" />
-              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="onetech" type="b2602c69:ProjectViewProjectNode" />
               <item name="onetech" type="462c0819:PsiDirectoryNode" />
-              <item name="EaganJones" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onetech" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onetech" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="onetech" type="b2602c69:ProjectViewProjectNode" />
@@ -296,14 +234,20 @@
               <item name="onetech" type="b2602c69:ProjectViewProjectNode" />
               <item name="onetech" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="onetech" type="b2602c69:ProjectViewProjectNode" />
               <item name="onetech" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onetech" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onetech" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,19 +261,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\home\static\js" />
+      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\home\static\styles" />
+      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\chartjs\templates" />
+      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\shop" />
+      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\home\static\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\shop\static\js" />
       <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\home\templates" />
       <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\onetech" />
       <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\orders" />
       <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\shop\templates" />
-      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\shop" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\shop" />
-      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\home\static\images" />
-      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\cart\templates" />
-      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech\home\templates" />
-      <recent name="C:\Users\prime\OneDrive\Desktop\Django\onetech" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -378,12 +322,20 @@
       <option name="presentableId" value="Default" />
       <updated>1578466012823</updated>
     </task>
+    <task id="LOCAL-00001" summary="updates">
+      <created>1585451975087</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585451975088</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24058163" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24058163" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -394,7 +346,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.41286862" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.41286862" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -424,31 +376,11 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EaganJones/templates/company_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EaganJones/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EaganJones/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" selection-start-line="4" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -477,13 +409,6 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart/templates/shop_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="68" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -604,13 +529,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop/templates/homebase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
@@ -770,16 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chartjs/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-          <folding>
-            <element signature="e#41#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/orders/management/commands/orderviz.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1531">
@@ -790,10 +698,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chartjs/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="e#41#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/static/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/static/js/main_chartjs.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart/templates/shop_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="63" column="106" selection-start-line="63" selection-start-column="102" selection-end-line="63" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/templates/homebase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="3" selection-end-line="50" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chartjs/templates/charts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="156" column="2" selection-start-line="156" selection-start-column="2" selection-end-line="156" selection-end-column="2" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chartjs/templates/charts-chartjs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
         </state>
       </provider>
     </entry>
