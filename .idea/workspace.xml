@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e52decb6-65c9-4547-93ae-fdbb5f70d635" name="Default Changelist" comment="">
+    <list default="true" id="e52decb6-65c9-4547-93ae-fdbb5f70d635" name="Default Changelist" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chartjs/templates/charts-chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/chartjs/templates/charts-chartjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/architectui-html-free/architectui-html-free/dashboard-boxes.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/architectui-html-free/architectui-html-free/dashboard-boxes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/management/commands/orderviz.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/management/commands/orderviz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -265,6 +260,11 @@
             <path>
               <item name="onetech" type="b2602c69:ProjectViewProjectNode" />
               <item name="onetech" type="462c0819:PsiDirectoryNode" />
+              <item name="chartjs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onetech" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onetech" type="462c0819:PsiDirectoryNode" />
               <item name="orders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -386,13 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585457674851</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updates">
+      <created>1585601883686</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585601883686</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24058163" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24058163" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -403,7 +411,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.41286862" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.41286862" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
