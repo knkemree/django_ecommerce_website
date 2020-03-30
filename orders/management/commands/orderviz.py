@@ -32,7 +32,7 @@ class Command(BaseCommand):
 
         payload = {
             "beginRange": "2019-09-01 00:00:00",
-            "endRange": str(datetime.datetime.now())
+            "endRange": "2020-03-29 00:00:00" #str(datetime.datetime.now())
         }
         veri = json.dumps(payload)
 
@@ -81,7 +81,7 @@ class Command(BaseCommand):
 
         print(df.head())
         for a, b, c, d, e, f, g, h, i, j, k in zip (df['user_id'], df['order_id'], df['product_id'], df['product_name'], df['quantity'], df['price_wholesale'],
-                            df['category_ids'], df['category_names'], df['order_date_y_m'], df['total'], df['parent_cat']):
+                            df['category_ids'], df['category_names'], df['order_date'], df['total'], df['parent_cat']):
 
 
             Orderpmp.objects.get_or_create(useri=a, orderi= b, producti = c, product_name = d, quantity = e, price_wholesale = f, categotyi = g,
@@ -93,6 +93,7 @@ class Command(BaseCommand):
         cases_list = []
         other_list = []
         date_list = []
+        totals = []
 
 
 
@@ -100,28 +101,29 @@ class Command(BaseCommand):
         qs1 = Orderpmp.objects.values('order_date').filter(parent_cat = 'Cases').annotate(Sum('total_sale'))
         qs2 = Orderpmp.objects.values('order_date').filter(parent_cat='nan').annotate(Sum('total_sale'))
         qs3 = Orderpmp.objects.values('order_date').annotate(Sum('total_sale'))
+        #qs4 = Orderpmp.objects.values('order_date').annotate(Sum('total_sale'))
         for lcd, cases, other, date in zip(qs, qs1, qs2, qs3):
             lcd_list.append(lcd['total_sale__sum'])
             cases_list.append(cases['total_sale__sum'])
             other_list.append(other['total_sale__sum'])
             date_list.append(date['order_date'])
-
+            totals.append(date['total_sale__sum'])
         print(qs)
 
-        fig = go.Figure(data=[
-            go.Bar(name='LCD', x=date_list, y=[round(x) for x in lcd_list], text=[round(x) for x in lcd_list], textposition='auto',),
-            go.Bar(name='Case', x=date_list, y=[round(x) for x in cases_list], text=[round(x) for x in cases_list], textposition='auto'),
-            go.Bar(name='Other', x=date_list, y=[round(x) for x in other_list], text=[round(x) for x in other_list], textposition='auto'),
-        ])
+        #fig = go.Figure(data=[
+            #go.Bar(name='LCD', x=date_list, y=[round(x) for x in lcd_list], text=[round(x) for x in lcd_list], textposition='auto',),
+            #go.Bar(name='Case', x=date_list, y=[round(x) for x in cases_list], text=[round(x) for x in cases_list], textposition='auto'),
+            #go.Bar(name='Other', x=date_list, y=[round(x) for x in other_list], text=[round(x) for x in other_list], textposition='auto'),
+        #])
 
-        #fig = go.Figure([go.Bar(y=sale_by_category,x=date)])
-        #fig.add_trace(go.Scatter(y=sale_by_category,x=date, mode = 'lines+markers',name="sales_by_category",line_color='deepskyblue',connectgaps=True))
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(y=totals,x=date_list, mode = 'lines+markers',name="sales_by_category",line_color='deepskyblue',connectgaps=True))
 
 
         fig.update_layout(barmode='stack',
                           title_text='Time Series with Rangeslider',
                           xaxis_rangeslider_visible=True,
-                          yaxis=dict(range=[0, 25000]),
+                          yaxis=dict(range=[0, 3000]),
 
                           xaxis=dict(
                               rangeselector=dict(

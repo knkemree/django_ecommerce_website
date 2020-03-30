@@ -6,9 +6,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 
 from cart.cart import Cart
-from orders.forms import OrderCreateForm
-from orders.models import OrderItem, Order
-from shop.models import Product
+from .forms import OrderCreateForm
+from .models import OrderItem, Order
+
 from .tasks import order_created
 
 
