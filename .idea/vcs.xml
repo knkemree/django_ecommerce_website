@@ -2,8 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Sec_edgar_10-K_filing-scraper" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/django-ecoomerce-website" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/django-ecoomerce-website/Sec_edgar_10-K_filing-scraper" vcs="Git" />
   </component>
 </project>
