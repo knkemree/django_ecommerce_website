@@ -53,7 +53,9 @@ INSTALLED_APPS = [
     'EaganJones',
     'clear_cache',
     'django_json_widget',
-    'chartjs'
+    'chartjs',
+    'brian',
+    'gtin_fields',
 
 
 
@@ -198,3 +200,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ]
 }
+
+DATE_INPUT_FORMATS = ['%Y/%m', '%m/%Y','%Y',]
