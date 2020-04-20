@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'django_json_widget',
     'chartjs',
     'brian',
-    'gtin_fields',
+
 
 
 
@@ -201,4 +201,3 @@ REST_FRAMEWORK = {
     ]
 }
 
-DATE_INPUT_FORMATS = ['%Y/%m', '%m/%Y','%Y',]
