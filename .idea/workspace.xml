@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e52decb6-65c9-4547-93ae-fdbb5f70d635" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/brian/management/commands/_private.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/brian/management/commands/populate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onetech/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/onetech/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brian/management/commands/_private.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brian/management/commands/populate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brian/templates/brian_charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brian/urls.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +69,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="15" />
-    <option name="width" value="1775" />
-    <option name="height" value="1030" />
-  </component>
   <component name="ProjectId" id="1amYCikOR8QMitVsEfqDJRUP1j2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -85,7 +79,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zypmedia" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -215,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585806923659</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="updates">
+      <created>1587342654370</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587342654370</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -229,6 +230,16 @@
     </ignored-roots>
     <MESSAGE value="updates" />
     <option name="LAST_COMMIT_MESSAGE" value="updates" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="395" y="1" key="CommitChangelistDialog2" timestamp="1587342650166">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="395" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1587342650165" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1587342758590">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1587342758590" />
   </component>
   <component name="masterDetails">
     <states>
