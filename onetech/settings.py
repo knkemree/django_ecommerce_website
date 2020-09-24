@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'clear_cache',
     'django_json_widget',
     'chartjs',
-    'brian',
 
 
 

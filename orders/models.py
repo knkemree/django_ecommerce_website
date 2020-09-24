@@ -72,7 +72,7 @@ class CustomerAddress(models.Model):
     line_3 = models.CharField(max_length=300)
     city = models.CharField(max_length=150)
     postalcode = models.CharField(max_length=10)
-    state = USStateField(blank=True)
+    state = USStateField()
     country = models.CharField(max_length=150)
 
 
